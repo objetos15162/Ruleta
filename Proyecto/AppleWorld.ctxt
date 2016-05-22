@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=AppleWorld
+comment0.text=\r\n\ This\ class\ is\ the\ world\ for\ the\ FallBall\ game.\r\n
+comment1.params=games\ pointCount
+comment1.target=AppleWorld(int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ AppleWorld.\r\n\ \r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ addApple()
+comment4.params=
+comment4.target=void\ drawBasket()
+numComments=5

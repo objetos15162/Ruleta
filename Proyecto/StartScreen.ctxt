@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=StartScreen
+comment0.text=\r\n\ This\ is\ the\ class\ for\ the\ title\ screen\ /\ main\ menu.\r\n\ From\ here\ you\ can\ start\ the\ game,\ view\ the\ highest\ scores\ or\ leave.\r\n
+comment1.params=
+comment1.target=StartScreen()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ drawCursor()
+comment4.params=
+comment4.target=boolean\ areBothHandsRaised()
+comment5.params=
+comment5.target=void\ drawEnvironment()
+comment6.params=
+comment6.target=void\ checkForPressedButtons()
+numComments=7

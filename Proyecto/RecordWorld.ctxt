@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=RecordWorld
+comment0.text=\r\n\ This\ is\ the\ class\ for\ the\ game\ records\ screen.\r\n\ It\ lists\ the\ highest\ scores.\r\n
+comment1.params=
+comment1.target=RecordWorld()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ drawCursor()
+comment4.params=
+comment4.target=void\ checkForPressedButton()
+numComments=5

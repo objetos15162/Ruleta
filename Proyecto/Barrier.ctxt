@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Barrier
+comment0.text=\r\n\ This\ class\ represents\ a\ barrier\ used\ in\ the\ FallBall\ game.\r\n
+comment1.params=fails
+comment1.target=Barrier(Counter)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ It's\ function\ is\ to\ update\ the\ counter\ each\ time\ an\ apple\ falls\ below\ the\r\n\ \r\n
+numComments=3

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=GameOverWorld
+comment0.text=\r\n\ This\ is\ the\ class\ for\ the\ game\ over\ screen.\r\n\ You\ get\ sent\ here\ when\ you\ complete\ 4\ random\ games.\r\n
+comment1.params=finalScore
+comment1.target=GameOverWorld(int)
+comment2.params=
+comment2.target=void\ saveRecord()
+numComments=3
