@@ -5,4 +5,5 @@ comment1.params=finalScore
 comment1.target=GameOverWorld(int)
 comment2.params=
 comment2.target=void\ saveRecord()
+comment2.text=\r\n\ Saves\ the\ player's\ final\ score\ to\ the\ records\ list.\r\n
 numComments=3

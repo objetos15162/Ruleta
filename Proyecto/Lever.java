@@ -1,17 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lever here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This class represents a lever, used in RouletteWorld to spin the Roulette.
+ * It's controlled by the player's cursor.
  */
 public class Lever extends Actor
 {
-    /**
-     * Act - do whatever the Lever wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     private boolean touched;
     
     public Lever()
@@ -19,6 +13,9 @@ public class Lever extends Actor
         touched = false;
     }
     
+    /**
+     * Constantly checks if the lever has been touched.
+     */
     public void act() 
     {
         if(!touched)
@@ -27,6 +24,9 @@ public class Lever extends Actor
         }
     }    
     
+    /**
+     * Sets the lever's y position to the cursor's y position.
+     */
     @Override
     public void move(int pos)
     {
@@ -36,6 +36,10 @@ public class Lever extends Actor
         }
     }
     
+    /**
+     * Checks if the lever is being touched by the cursor and if so, updates the
+     * boolean indicator for it.
+     */
     public void checkForTouch()
     {
         if(isTouching(Cursor.class))
@@ -44,6 +48,10 @@ public class Lever extends Actor
         }
     }
     
+    /**
+     * Access method which returns the boolean indicator as true if the lever
+     * has been touched.
+     */
     public boolean hasBeenTouched()
     {
         return touched;

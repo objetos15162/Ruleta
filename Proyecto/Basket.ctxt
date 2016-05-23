@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Basket
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Basket\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ class\ represents\ a\ basket\ used\ by\ the\ player\ to\ catch\ falling\ apples\ in\r\n\ Apple\ Catch.\ It's\ controlled\ by\ the\ player's\ x-axis.\r\n
 comment1.params=pointCount
 comment1.target=Basket(Counter)
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ Checks\ if\ an\ apple\ has\ been\ caught\ by\ the\ basket\ and\ if\ so,\ removes\ it\r\n\ and\ updates\ the\ score.\r\n
 numComments=3

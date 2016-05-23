@@ -52,6 +52,12 @@ public class PaintWorld extends KinectWorld
         addObject(brush, 320, 240);
     }
     
+    /**
+     * Act - Pauses the game if the Kinect isn't connected.
+     * Calls the corresponding methods to control the brush, update the time left
+     * and check the world for completed figures.
+     * If the time's up, ends the game.
+     */
     public void act()
     {
         super.act();
@@ -71,6 +77,9 @@ public class PaintWorld extends KinectWorld
         }
     }
     
+    /**
+     * Updates the paintbrush position to the player's right hand.
+     */
     public void drawBrush()
     {
         UserData[] users = getTrackedUsers();
@@ -81,6 +90,9 @@ public class PaintWorld extends KinectWorld
         }
     }
     
+    /**
+     * Updates the counter with the remaining time.
+     */
     public void updateTime()
     {
         if(time.millisElapsed()>=1000)
@@ -90,6 +102,10 @@ public class PaintWorld extends KinectWorld
         }
     }
     
+    /**
+     * Checks if all sections in the ArrayList are painted and if so, returns a
+     * true boolean indicator.
+     */
     public boolean isFigureComplete()
     {
         int figureSize = sections.size();
@@ -111,6 +127,13 @@ public class PaintWorld extends KinectWorld
         }
     }
     
+    /**
+     * Checks for any figure drawn, and if there is one, checks if it is complete.
+     * If so, updates the point count, resets the time left to complete the next
+     * one and removes all sections in the world, also clearing them from the
+     * ArrayList.
+     * If there's no figure drawn, calls the method to draw one.
+     */
     public void checkFigure()
     {
         if(isFigureDrawn)
@@ -135,6 +158,10 @@ public class PaintWorld extends KinectWorld
         }
     }
     
+    /**
+     * Randomly chooses one of the three possible figures for the player to draw.
+     * Updates the boolean indicator for any drawn figures.
+     */
     public void addRandomFigure()
     {
         int randomNum = Greenfoot.getRandomNumber(3)+1;
@@ -150,6 +177,10 @@ public class PaintWorld extends KinectWorld
         isFigureDrawn = true;
     }
     
+    /**
+     * Adds the figure sections in a rectangular shape, and stacks them on an
+     * array list.
+     */
     public void drawRectangle()
     {
         FigureSection part;
@@ -180,6 +211,10 @@ public class PaintWorld extends KinectWorld
         }
     }
     
+    /**
+     * Adds the figure sections in a cross shape, and stacks them on an
+     * array list.
+     */
     public void drawCross()
     {
         FigureSection part;
@@ -198,6 +233,10 @@ public class PaintWorld extends KinectWorld
         }
     }
     
+    /**
+     * Adds the figure sections in a triangular shape, and stacks them on an
+     * array list.
+     */
     public void drawTriangle()
     {
         FigureSection part;

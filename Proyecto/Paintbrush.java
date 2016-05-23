@@ -1,15 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Paintbrush here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This class represents a paintbrush, used in the figure painting world.
+ * It's controlled by the player's right hand.
  */
 public class Paintbrush extends Actor
 {
     public void act() 
     {
-        
     }    
 }

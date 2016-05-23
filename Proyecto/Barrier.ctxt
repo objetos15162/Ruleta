@@ -5,5 +5,5 @@ comment1.params=fails
 comment1.target=Barrier(Counter)
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ It's\ function\ is\ to\ update\ the\ counter\ each\ time\ an\ apple\ falls\ below\ the\r\n\ \r\n
+comment2.text=\r\n\ Act\ -\ Checks\ if\ an\ apple\ has\ been\ caught\ by\ the\ barrier\ and\ if\ so,\ removes\r\n\ it\ and\ updates\ the\ remaining\ fails.\r\n
 numComments=3

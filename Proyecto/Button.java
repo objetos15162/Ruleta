@@ -1,10 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class RedButton here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This class represents a button, used in the title screen and records screen.
  */
 public abstract class Button extends Actor
 {
@@ -17,6 +14,11 @@ public abstract class Button extends Actor
         isItPressed = false;
     }    
     
+    /**
+     * Act - Checks if it's being touched by the player's cursor and if so,
+     * starts counting two seconds. After those two seconds, the boolean indicator
+     * is updated to let the world know the button has been selected.
+     */
     public void act()
     {
         if(isTouching(Cursor.class))
@@ -32,16 +34,12 @@ public abstract class Button extends Actor
         }
     }
     
+    /**
+     * Access method which returns the boolean indicator as true if the button has
+     * been selected.
+     */
     public boolean isPressed()
     {
         return isItPressed;
-    }
-    
-    public boolean isTouchingCursor()
-    {
-        if(isTouching(Cursor.class))
-            return true;
-        else
-            return false;
     }
 }

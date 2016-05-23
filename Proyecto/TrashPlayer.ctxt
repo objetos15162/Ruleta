@@ -1,13 +1,18 @@
 #BlueJ class context
 comment0.target=TrashPlayer
+comment0.text=\r\n\ This\ class\ represents\ the\ player\ in\ the\ CleanScreen\ game.\r\n
 comment1.params=width\ height\ points
 comment1.target=TrashPlayer(int,\ int,\ Counter)
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ Tracks\ the\ user's\ joints\ and\ calls\ the\ corresponding\ methods\ to\r\n\ move\ the\ sponges\ and\ check\ if\ the\ score\ needs\ to\ be\ updated.\r\n
 comment3.params=world
 comment3.target=void\ addSponges(TrashWorld)
+comment3.text=\r\n\ If\ the\ sponges\ haven't\ been\ added\ yet,\ this\ method\ adds\ them\ to\ the\ world.\r\n
 comment4.params=
 comment4.target=void\ setSpongeLocations()
+comment4.text=\r\n\ Sets\ the\ left\ and\ right\ sponges\ to\ the\ player's\ left\ and\ right\ hands\r\n\ respectively.\r\n
 comment5.params=
 comment5.target=void\ checkForPoints()
+comment5.text=\r\n\ Also\ checks\ if\ a\ trash\ object\ has\ been\ touched\ recently\ and\ if\ so,\r\n\ increases\ the\ score.\r\n
 numComments=6

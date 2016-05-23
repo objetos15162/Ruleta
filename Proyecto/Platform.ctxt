@@ -5,5 +5,5 @@ comment1.params=scrollSpeed
 comment1.target=Platform(int)
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ The\ platform\ keeps\ ascending.\r\n\ Its\ speed\ depends\ on\ the\ current\ world's\ scrollSpeed.\r\n
+comment2.text=\r\n\ The\ platform\ keeps\ ascending.\r\n\ Its\ speed\ depends\ on\ the\ current\ world's\ scroll\ speed.\r\n
 numComments=3

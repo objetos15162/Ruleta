@@ -15,7 +15,7 @@ public class Platform extends Actor
     
     /**
      * The platform keeps ascending.
-     * Its speed depends on the current world's scrollSpeed.
+     * Its speed depends on the current world's scroll speed.
      */
     public void act() 
     {

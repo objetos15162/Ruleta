@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=FigureSection
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ FigureSection\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ class\ represents\ a\ figure\ section,\ used\ in\ the\ Figure\ Painting\ game.\r\n
 comment1.params=coloredSection
 comment1.target=FigureSection(greenfoot.GreenfootImage)
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ If\ the\ section\ hasn't\ yet\ been\ painted,\ checks\ if\ it's\ being\ touched\r\n\ by\ the\ paintbrush\ and\ it\ so,\ updates\ the\ object\ image\ to\ the\ colores\ section\r\n\ GreenfootImage.\r\n
 comment3.params=
 comment3.target=boolean\ isPainted()
+comment3.text=\r\n\ Access\ method\ which\ returns\ the\ boolean\ indicator\ as\ true\ if\ the\r\n\ section\ has\ already\ been\ painted.\r\n
 numComments=4

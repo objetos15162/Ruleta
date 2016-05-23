@@ -63,6 +63,13 @@ public class RouletteWorld extends KinectWorld
         addObject(new Thumbnail(), 40, height - THUMBNAIL_HEIGHT/2);
     }
     
+    /**
+     * Act - Pauses the game if the Kinect isn't connected.
+     * Calls the corresponding methods to control the cursor and check if
+     * the lever is down.
+     * If so, starts spinning the roulette at a random speed and random amount
+     * of time, then calls the method to start the corresponding game.
+     */
     public void act()
     {
         super.act();
@@ -110,6 +117,9 @@ public class RouletteWorld extends KinectWorld
         }
     }
     
+    /**
+     * Sets the cursor's position to the player's right hand.
+     */
     public void drawCursor()
     {
         UserData[] us = getTrackedUsers();
@@ -120,6 +130,11 @@ public class RouletteWorld extends KinectWorld
         }
     }
     
+    /**
+     * Sets the lever's y position to the cursor's y position.
+     * If the lever is all the way down, updates the boolean indicator for
+     * itself being down.
+     */
     public void moveLever()
     {
         lever.move(rightHand.getY());
@@ -134,6 +149,10 @@ public class RouletteWorld extends KinectWorld
         }
     }
     
+    /**
+     * Checks the rotation of the roulette after it has been spun and starts
+     * the corresponding game.
+     */
     public void checkGame()
     {
         if(roulette.getRotation() >= 0 && roulette.getRotation() < 90)

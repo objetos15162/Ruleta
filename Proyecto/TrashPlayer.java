@@ -1,5 +1,8 @@
 import greenfoot.*;
 
+/**
+ * This class represents the player in the CleanScreen game.
+ */
 public class TrashPlayer extends Actor
 {
     private Sponge leftSponge;
@@ -20,6 +23,10 @@ public class TrashPlayer extends Actor
         areSpongesActive = false;
     }
 
+    /**
+     * Act - Tracks the user's joints and calls the corresponding methods to
+     * move the sponges and check if the score needs to be updated.
+     */
     public void act() 
     {
         TrashWorld world = (TrashWorld)getWorld();
@@ -35,6 +42,9 @@ public class TrashPlayer extends Actor
         pointCount.setValue(pointNum);
     }
     
+    /**
+     * If the sponges haven't been added yet, this method adds them to the world.
+     */
     public void addSponges(TrashWorld world)
     {
         if(areSpongesActive == false)
@@ -45,12 +55,20 @@ public class TrashPlayer extends Actor
             }
     }
     
+    /**
+     * Sets the left and right sponges to the player's left and right hands
+     * respectively.
+     */
     public void setSpongeLocations()
     {
         leftSponge.setLocation(leftHand.getX(), leftHand.getY());
         rightSponge.setLocation(rightHand.getX(), rightHand.getY());
     }
     
+    /**
+     * Also checks if a trash object has been touched recently and if so,
+     * increases the score.
+     */
     public void checkForPoints()
     {
         if(leftSponge.touched())

@@ -32,8 +32,19 @@ public class GameOverWorld extends KinectWorld
         
     }
     
+    /**
+     * Saves the player's final score to the records list.
+     */
     public void saveRecord()
     {
-        
+        if (UserInfo.isStorageAvailable()) 
+        {
+            UserInfo myInfo = UserInfo.getMyInfo();
+            if (score > myInfo.getScore() || myInfo.getScore()==0) 
+            {
+                myInfo.setScore(score);
+                myInfo.store();
+            }
+        }
     }
 }

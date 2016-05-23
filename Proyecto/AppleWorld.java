@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This class is the world for the FallBall game.
+ * This class is the world for the Apple Catch game.
  */
 public class AppleWorld extends KinectWorld
 {
@@ -19,10 +19,6 @@ public class AppleWorld extends KinectWorld
     private int totalPoints;
     private int gamesLeft;
     
-    /**
-     * Constructor for objects of class AppleWorld.
-     * 
-     */
     public AppleWorld(int games, int pointCount)
     {
         super(THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT, 1.0, false);
@@ -50,6 +46,11 @@ public class AppleWorld extends KinectWorld
         addObject(bask, 320, 410);
     }
     
+    /**
+     * Act - Pauses the game if the Kinect isn't connected.
+     * Calls the corresponding methods to control the basket and add apples.
+     * If the fails left count is depleted, it ends the game.
+     */
     public void act()
     {
         super.act();
@@ -67,10 +68,13 @@ public class AppleWorld extends KinectWorld
         }
     }
     
+    /**
+     * Adds a new falling apple each 3 seconds.
+     */
     public void addApple()
     {
         int x, y;
-        if(time.millisElapsed() >= 5000)
+        if(time.millisElapsed() >= 3000)
         {
             x = Greenfoot.getRandomNumber(400)+70;
             y = Greenfoot.getRandomNumber(250)+200;
@@ -80,6 +84,9 @@ public class AppleWorld extends KinectWorld
         }
     }
     
+    /**
+     * Sets the basket's x position to the player's x-axis.
+     */
     public void drawBasket()
     {
         UserData[] users = getTrackedUsers();

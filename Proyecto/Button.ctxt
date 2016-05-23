@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=Button
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ RedButton\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ class\ represents\ a\ button,\ used\ in\ the\ title\ screen\ and\ records\ screen.\r\n
 comment1.params=
 comment1.target=Button()
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ Checks\ if\ it's\ being\ touched\ by\ the\ player's\ cursor\ and\ if\ so,\r\n\ starts\ counting\ two\ seconds.\ After\ those\ two\ seconds,\ the\ boolean\ indicator\r\n\ is\ updated\ to\ let\ the\ world\ know\ the\ button\ has\ been\ selected.\r\n
 comment3.params=
 comment3.target=boolean\ isPressed()
-comment4.params=
-comment4.target=boolean\ isTouchingCursor()
-numComments=5
+comment3.text=\r\n\ Access\ method\ which\ returns\ the\ boolean\ indicator\ as\ true\ if\ the\ button\ has\r\n\ been\ selected.\r\n
+numComments=4

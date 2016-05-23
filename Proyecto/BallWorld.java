@@ -49,6 +49,12 @@ public class BallWorld extends KinectWorld
         addObject(new Thumbnail(), 40, height - THUMBNAIL_HEIGHT/2);
     }
     
+    /**
+     * Act - Pauses the game if the Kinect isn't connected.
+     * Calls the corresponging methods to scroll the screen, control the ball,
+     * create the ascending platforms and speed up the scrolling.
+     * Ends the game if the ball reaches the top of the screen.
+     */
     public void act()
     {
         super.act();
@@ -69,6 +75,11 @@ public class BallWorld extends KinectWorld
         }
     }
     
+    /**
+     * This method creates a pair of platforms, calculating a space between them
+     * for the ball to fall in between. If the pair of platforms reach the top,
+     * it removes them and creates a new pair.
+     */
     public void createPlatforms()
     {
         if(a==null)
@@ -100,6 +111,9 @@ public class BallWorld extends KinectWorld
         }
     }
     
+    /**
+     * Speeds up the scrolling each 10 seconds.
+     */
     public void speedUp()
     {
         if(timeElapsed.millisElapsed() >= 10000)
@@ -110,6 +124,10 @@ public class BallWorld extends KinectWorld
         }
     }
     
+    /**
+     * Sets the x position of the ball to the player's x-axis.
+     * Moves the ball by the scrollSpeed.
+     */
     public void moveBall()
     {
         UserData[] users = getTrackedUsers();
@@ -121,6 +139,9 @@ public class BallWorld extends KinectWorld
         ball.move(scrollSpeed);
     }
     
+    /**
+     * Updates the background image to the position recieved.
+     */
     private void paint(int position)
     {
         GreenfootImage background = getBackground();
@@ -128,6 +149,9 @@ public class BallWorld extends KinectWorld
         background.drawImage(scrollingImage, 0, position - scrollingImage.getHeight());
     }
     
+    /**
+     * Returns the image to be scrolled.
+     */
     private GreenfootImage getScrollingImage(int width, int height)
     {
         GreenfootImage image = new GreenfootImage(width, height);
@@ -139,6 +163,10 @@ public class BallWorld extends KinectWorld
         return image;
     } 
     
+    /**
+     * Updates the scroll position of the background image and calls the paint method
+     * to paint it.
+     */
     private void doScrolling()
     {
         if(scrollSpeed > 0 && scrollPosition <= 0) {

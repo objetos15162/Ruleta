@@ -54,6 +54,13 @@ public class StartScreen extends KinectWorld
         addObject(new Thumbnail(), 40, height - THUMBNAIL_HEIGHT/2);
     }
     
+    /**
+     * Act - Pauses the game if the Kinect isn't connected.
+     * Checks if the environment is already drawn and if so, starts updating
+     * the cursor and checking for pressed buttons.
+     * If the environment hasn't yet been drawn, checks for both hands raised
+     * and if they are, it draws the environment.
+     */
     public void act()
     {
         super.act();
@@ -76,6 +83,9 @@ public class StartScreen extends KinectWorld
         }
     }
     
+    /**
+     * Updates the cursor's position to the player's right hand.
+     */
     public void drawCursor()
     {
         UserData[] us = getTrackedUsers();
@@ -86,6 +96,10 @@ public class StartScreen extends KinectWorld
         }
     }
     
+    /**
+     * Tracks the player's joints for the left hand, right hand and head.
+     * If both hands are over the head, returns the boolean indicator as true.
+     */
     public boolean areBothHandsRaised()
     {
         boolean handsRaised = false;
@@ -103,6 +117,9 @@ public class StartScreen extends KinectWorld
         return handsRaised;
     }
     
+    /**
+     * Adds the cursor, buttons and descriptions for each button.
+     */
     public void drawEnvironment()
     {
         removeObject(instructions);
@@ -116,6 +133,10 @@ public class StartScreen extends KinectWorld
         addObject(cursor, rightHand.getX(), rightHand.getY());
     }
     
+    /**
+     * Checks if a button has been pressed and if so, starts the game, takes the
+     * player to the records screen or exits the game correspondingly.
+     */
     public void checkForPressedButtons()
     {
         if(playGame.isPressed())

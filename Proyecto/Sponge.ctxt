@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=Sponge
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Sponge\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ class\ represents\ a\ sponge,\ used\ in\ the\ Clean\ Screen\ game.\r\n\ They're\ controlled\ by\ the\ player's\ left\ and\ right\ hands.\r\n
 comment1.params=
 comment1.target=Sponge()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Sponge\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Checks\ if\ the\ sponge\ is\ touching\ a\ Trash\ object\ and\ if\ so,\ removes\ it.\r\n
 comment3.params=
 comment3.target=void\ setTouchValue()
+comment3.text=\r\n\ Updates\ the\ boolean\ indicator\ for\ touching\ each\ 10\ milliseconds\ so\ the\r\n\ player\ doesn't\ recieve\ double\ points\ for\ a\ single\ trash.\r\n
 comment4.params=
 comment4.target=boolean\ touched()
+comment4.text=\r\n\ Access\ method\ which\ returns\ the\ boolean\ indicator\ as\ true\ if\ the\ sponge\ has\r\n\ touched\ a\ Trash\ object\ recently.\r\n
 numComments=5

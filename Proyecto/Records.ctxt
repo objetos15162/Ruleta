@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Records
+comment1.params=
+comment1.target=Records()
+comment2.params=points
+comment2.target=void\ saveRecords(int)
+numComments=3

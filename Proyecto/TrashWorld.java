@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
+
 /**
  * This class is the world for the CleanScreen game.
  */
@@ -45,6 +46,11 @@ public class TrashWorld extends KinectWorld
         addObject(new Thumbnail(), 40, height - THUMBNAIL_HEIGHT/2);
     }
     
+    /**
+     * Act - Pauses the game if the Kinect isn't connected.
+     * Calls the corresponding methods to draw the player's stick figure,
+     * add Trash objects and check/update the time elapsed.
+     */
     public void act()
     {
         super.act();
@@ -57,6 +63,10 @@ public class TrashWorld extends KinectWorld
         updateTimeElapsed();
     }
     
+    /**
+     * Draws the player's stick figure over the background and alternates the
+     * background so the stick figures don't stack.
+     */
     public void drawPlayer()
     {
         UserData[] us = getTrackedUsers();
@@ -70,6 +80,9 @@ public class TrashWorld extends KinectWorld
         }
     }
     
+    /**
+     * Adds 3 new Trash objects each three seconds.
+     */
     public void addTrash()
     {
         int i, x, y, image;
@@ -88,6 +101,10 @@ public class TrashWorld extends KinectWorld
         }
     }
     
+    /**
+     * Updates the seconds left counter.
+     * Checks if the time's up and if so, returns to the game selection screen.
+     */
     public void updateTimeElapsed()
     {    
         if(time.millisElapsed() >= 1000)
@@ -104,6 +121,10 @@ public class TrashWorld extends KinectWorld
         }
     }
     
+    /**
+     * Prepares the trash images to be sent to the Trash objects,
+     * stacks them on an Array List.
+     */
     public void initializeTrashIMGs()
     {
         GreenfootImage image;

@@ -15,8 +15,8 @@ public class Barrier extends Actor
     }
     
     /**
-     * It's function is to update the counter each time an apple falls below the
-     * basket, and 
+     * Act - Checks if an apple has been caught by the barrier and if so, removes
+     * it and updates the remaining fails.
      */
     public void act() 
     {
