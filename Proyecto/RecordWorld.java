@@ -33,6 +33,7 @@ public class RecordWorld extends KinectWorld
         addObject(score, 325,220);
         addObject(titleScreen, 343, 450);
         addObject(title, 502, 450);
+        addObject(cursor, 20, 20);
     }
 
     /**
