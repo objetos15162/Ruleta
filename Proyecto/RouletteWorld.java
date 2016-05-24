@@ -31,11 +31,6 @@ public class RouletteWorld extends KinectWorld
         gamesLeft = games;
         totalPoints = pointCount;
         
-        if(gamesLeft == 0)
-        {
-            Greenfoot.setWorld(new GameOverWorld(totalPoints));
-        }
-        
         setBackground("rouletteworldbg.png");
         
         spinning = new GreenfootSound("roulette.wav");
@@ -73,6 +68,10 @@ public class RouletteWorld extends KinectWorld
     public void act()
     {
         super.act();
+        if(gamesLeft == 0)
+        {
+            Greenfoot.setWorld(new GameOverWorld(totalPoints));
+        }
         if(!isConnected())
         {
             return;

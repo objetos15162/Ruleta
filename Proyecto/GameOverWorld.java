@@ -28,8 +28,15 @@ public class GameOverWorld extends KinectWorld
         addObject(yourScore, 320, 350);
         
         saveRecord();
-        Greenfoot.delay(20);
-        
+    }
+     
+    /**
+     * Act - Takes the player to the records screen.
+     */
+    public void act()
+    {
+        Greenfoot.delay(200);
+        Greenfoot.setWorld(new RecordWorld());
     }
     
     /**
