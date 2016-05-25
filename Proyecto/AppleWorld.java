@@ -8,7 +8,7 @@ public class AppleWorld extends KinectWorld
     private static final int THUMBNAIL_WIDTH = 80;
     private static final int THUMBNAIL_HEIGHT = 60;
     
-    public Counter points;
+    private Counter points;
     private Counter failsLeft;
     private Joint head;
     private SimpleTimer time;
